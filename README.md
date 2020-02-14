@@ -10,7 +10,7 @@ DEBUG='amqplib-express-example:*' node index.js
 ```
 curl -H "Content-Type: application/json" -X POST -d '{ "email": "foo@bar.com" }' http://localhost:3000/api/user/forgot-password
 ```
-*Unless you create a queue and bind it to the `user-exchange` the application will report that messages are returned
+*Unless you create a queue and bind it to the `user-exchange` the application will report that messages are returned*
 
 #### Testing automated recovery (1)
 ```
