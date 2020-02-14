@@ -1,0 +1,25 @@
+{
+  "name": "amqplib-express-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "p-retry": "^4.2.0",
+    "p-waterfall": "^2.1.0",
+    "p-series": "^2.1.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Cresswell",
+  "license": "ISC"
+}
