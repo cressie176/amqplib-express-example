@@ -1,3 +1,6 @@
+#### Prerequisite
+* Node 12
+
 #### Starting the app
 ```
 npm install
