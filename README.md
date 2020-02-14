@@ -15,13 +15,21 @@ curl -H "Content-Type: application/json" -X POST -d '{ "email": "foo@bar.com" }'
 ```
 *Unless you create a queue and bind it to the `user-exchange` the application will report that messages are returned*
 
-#### Testing automated recovery (1)
+#### Testing automated recovery (connection close)
 ```
 docker restart rabbitmq
 ```
 
-#### Testing automated recovery (2)
+#### Testing automated recovery (connection error)
 ```
 docker kill rabbitmq
 docker restart rabbitmq
+```
+
+
+#### Testing automated recovery (heartbeat timeout)
+```
+docker pause rabbitmq
+sleep 5
+docker unpause rabbitmq
 ```
