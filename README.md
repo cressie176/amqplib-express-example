@@ -9,7 +9,7 @@ This application demonstrates how to use amqplib with express in response to [th
     * unacknowledged publishes
 * Provides graceful startup and shutdown
 
-There are several ways of using amqplib, each with different trade-offs. Alternative approaches might open/close a channel for each publish command, or maintain a pool of permanently open channels. Others may perfer performance over reliability and not use a confirm channel. The code would also have been more coherent if I had used async/await, but the original poster was experiences difficulty with promises, so I went with them instead.
+There are several ways of using amqplib, each with different trade-offs. Alternative approaches might open/close a channel for each publish command, or maintain a pool of permanently open channels. Others may perfer performance over reliability and not use a confirm channel. The code would also have been more coherent if I had used async/await, but the original poster I was responding to was experiencing difficulty with promises, so I went with them instead.
 
 #### Prerequisite
 * Node 12
