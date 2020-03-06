@@ -1,4 +1,3 @@
-const debug = require('debug')('amqplib-express-example:index');
 const pWaterfall = require('p-waterfall');
 const topology = require('./lib/topology');
 const broker = require('./lib/broker');

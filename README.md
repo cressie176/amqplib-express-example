@@ -1,3 +1,16 @@
+# amqplib and express example
+This application demonstrates how to use amqplib with express in response to [this](https://github.com/squaremo/amqp.node/issues/555) issue. Points of note are:
+
+* Assertion of RabbitMQ topology on application start
+* Automated recovery following connection or channel errors
+* Detects and reports
+    * saturated channels
+    * unroutable messages
+    * unacknowledged publishes
+* Provides graceful startup and shutdown
+
+There are several ways of using amqplib, each with different trade-offs. Alternative approaches might open/close a channel for each publish command, or maintain a pool of permanently open channels. Others may perfer performance over reliability and not use a confirm channel. The code would also have been more coherent if I had used async/await, but the original poster was experiences difficulty with promises, so I went with them instead.
+
 #### Prerequisite
 * Node 12
 
@@ -6,7 +19,7 @@
 npm install
 docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 sleep 10
-DEBUG='amqplib-express-example:*' node index.js 
+DEBUG='amqplib-express-example:*' node index.js
 ```
 
 #### Exercising the app
